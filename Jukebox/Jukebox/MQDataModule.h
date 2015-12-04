@@ -13,5 +13,7 @@
 
 + (instancetype)sharedInstance;
 -(void)fetchSongsWithQuery:(NSString *)query success:(SuccssBlock)success failure:(FailureBlock)failure;
+-(void)fetchQueueWithSuccess:(SuccssBlock)success failure:(FailureBlock)failure;
+-(void)fetchCurrentlyPlayingSuccess:(SuccssBlock)success failure:(FailureBlock)failure;
 
 @end

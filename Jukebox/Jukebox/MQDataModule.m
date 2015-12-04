@@ -41,4 +41,12 @@
     [self.networkManager fetchSongsWithQuery:query success:success failure:failure];
 }
 
+-(void)fetchQueueWithSuccess:(SuccssBlock)success failure:(FailureBlock)failure {
+    [self.networkManager fetchQueueWithSuccess:success failure:failure];
+}
+
+-(void)fetchCurrentlyPlayingSuccess:(SuccssBlock)success failure:(FailureBlock)failure {
+    [self.networkManager fetchCurrentlyPlayingWithSuccess:success failure:failure];
+}
+
 @end

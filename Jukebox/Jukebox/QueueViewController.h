@@ -6,8 +6,9 @@
 //  Copyright © 2015 Pivotal. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface QueueViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate> : UIViewController
+@interface QueueViewController<UITableViewDataSource, UITableViewDelegate> : UIViewController
 
 @end

@@ -15,4 +15,11 @@
                     success:(SuccssBlock)success
                     failure:(FailureBlock)failure;
 
+-(void)fetchQueueWithSuccess:(SuccssBlock)success
+                     failure:(FailureBlock)failure;
+
+-(void)fetchCurrentlyPlayingWithSuccess:(SuccssBlock)success
+                                failure:(FailureBlock)failure;
+
+
 @end

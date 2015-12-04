@@ -13,7 +13,7 @@
 		9B69BE5D1C120BB700841D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B69BE5B1C120BB700841D12 /* Main.storyboard */; };
 		9B69BE5F1C120BB700841D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B69BE5E1C120BB700841D12 /* Assets.xcassets */; };
 		9B69BE621C120BB700841D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B69BE601C120BB700841D12 /* LaunchScreen.storyboard */; };
-		9BAF60DC1C120FB10018ECF1 /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60DB1C120FB10018ECF1 /* QueueViewController.m */; };
+		9BAF60DC1C120FB10018ECF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60DB1C120FB10018ECF1 /* SearchViewController.m */; };
 		9BAF60E31C1212E50018ECF1 /* QueueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E11C1212E50018ECF1 /* QueueCell.m */; };
 		9BAF60E41C1212E50018ECF1 /* QueueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF60E21C1212E50018ECF1 /* QueueCell.xib */; };
 		9BAF60E71C1218630018ECF1 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E61C1218630018ECF1 /* Song.m */; };
@@ -23,6 +23,7 @@
 		9BAF60F31C122B2D0018ECF1 /* MQSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F21C122B2D0018ECF1 /* MQSessionManager.m */; };
 		9BAF60F61C122B770018ECF1 /* MQConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F51C122B770018ECF1 /* MQConstants.m */; };
 		9BAF60F91C122D6B0018ECF1 /* MQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */; };
+		9BAF60FC1C1250950018ECF1 /* QueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60FB1C1250950018ECF1 /* QueueViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,8 @@
 		9B69BE5E1C120BB700841D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B69BE611C120BB700841D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B69BE631C120BB700841D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BAF60DA1C120FB10018ECF1 /* QueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueViewController.h; sourceTree = "<group>"; };
-		9BAF60DB1C120FB10018ECF1 /* QueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueViewController.m; sourceTree = "<group>"; };
+		9BAF60DA1C120FB10018ECF1 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SearchViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		9BAF60DB1C120FB10018ECF1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SearchViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9BAF60E01C1212E50018ECF1 /* QueueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueCell.h; sourceTree = "<group>"; };
 		9BAF60E11C1212E50018ECF1 /* QueueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueCell.m; sourceTree = "<group>"; };
 		9BAF60E21C1212E50018ECF1 /* QueueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueCell.xib; sourceTree = "<group>"; };
@@ -55,6 +56,8 @@
 		9BAF60F51C122B770018ECF1 /* MQConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQConstants.m; sourceTree = "<group>"; };
 		9BAF60F71C122D6B0018ECF1 /* MQBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQBaseModel.h; sourceTree = "<group>"; };
 		9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQBaseModel.m; sourceTree = "<group>"; };
+		9BAF60FA1C1250950018ECF1 /* QueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueViewController.h; sourceTree = "<group>"; };
+		9BAF60FB1C1250950018ECF1 /* QueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueViewController.m; sourceTree = "<group>"; };
 		E2F2C5988155495D838A6562 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,8 +104,8 @@
 				9B69BE601C120BB700841D12 /* LaunchScreen.storyboard */,
 				9B69BE631C120BB700841D12 /* Info.plist */,
 				9B69BE4C1C120BB700841D12 /* Supporting Files */,
-				9BAF60DA1C120FB10018ECF1 /* QueueViewController.h */,
-				9BAF60DB1C120FB10018ECF1 /* QueueViewController.m */,
+				9BAF60DA1C120FB10018ECF1 /* SearchViewController.h */,
+				9BAF60DB1C120FB10018ECF1 /* SearchViewController.m */,
 				9BAF60E51C1218630018ECF1 /* Song.h */,
 				9BAF60E61C1218630018ECF1 /* Song.m */,
 				9BAF60E81C1227470018ECF1 /* MQNetworkManager.h */,
@@ -117,6 +120,8 @@
 				9BAF60F51C122B770018ECF1 /* MQConstants.m */,
 				9BAF60F71C122D6B0018ECF1 /* MQBaseModel.h */,
 				9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */,
+				9BAF60FA1C1250950018ECF1 /* QueueViewController.h */,
+				9BAF60FB1C1250950018ECF1 /* QueueViewController.m */,
 			);
 			path = Jukebox;
 			sourceTree = "<group>";
@@ -268,8 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BAF60FC1C1250950018ECF1 /* QueueViewController.m in Sources */,
 				9BAF60E71C1218630018ECF1 /* Song.m in Sources */,
-				9BAF60DC1C120FB10018ECF1 /* QueueViewController.m in Sources */,
+				9BAF60DC1C120FB10018ECF1 /* SearchViewController.m in Sources */,
 				9BAF60EA1C1227470018ECF1 /* MQNetworkManager.m in Sources */,
 				9B69BE511C120BB700841D12 /* AppDelegate.m in Sources */,
 				9B69BE4E1C120BB700841D12 /* main.m in Sources */,

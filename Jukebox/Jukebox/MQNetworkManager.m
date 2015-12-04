@@ -72,6 +72,53 @@
                      }];
 }
 
+-(void)fetchQueueWithSuccess:(SuccssBlock)success failure:(FailureBlock)failure {
+    [self.sessionManager GET:[NSString stringWithFormat:@"queue"]
+                  parameters:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+                         NSLog(@"Fetching queue success");
+                         NSArray *resultArray = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:NULL];
+                         NSArray *songs = [resultArray map:^id(NSDictionary *songJson) {
+                             NSError *error;
+                             Song *song = [MTLJSONAdapter modelOfClass:Song.class fromJSONDictionary:songJson error:&error];
+                             if (error) {
+                                 NSLog(@"failed to parse Song from list");
+                                 return NULL;
+                             } else {
+                                 return song;
+                             }
+                         }];
+                         if (success) {
+                             success(songs);
+                         }
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         NSLog(@"Fetching song list failed with error: %@", error);
+                         if (failure) {
+                             failure(error);
+                         }
+                     }];
+}
+
+-(void)fetchCurrentlyPlayingWithSuccess:(SuccssBlock)success failure:(FailureBlock)failure {
+    [self.sessionManager GET:[NSString stringWithFormat:@"song"]
+                  parameters:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+                         NSLog(@"Fetching queue success");
+                         NSDictionary *resultJson = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:NULL];
+                         NSError *error;
+                         Song *song = [MTLJSONAdapter modelOfClass:Song.class fromJSONDictionary:resultJson error:&error];
+                         
+                         if (success) {
+                             success(song);
+                         }
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         NSLog(@"Fetching song list failed with error: %@", error);
+                         if (failure) {
+                             failure(error);
+                         }
+                     }];
+}
+
 #pragma mark - Helpers
 
 - (void)parseModelClass:(Class)modelClass
