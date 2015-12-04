@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
 
 @property (nonatomic, strong) Song *song;
 @end
@@ -32,10 +33,9 @@
     self.artistLabel.text = self.song.artist;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (IBAction)didTapAddButton:(id)sender {
+    
 }
 
 @end

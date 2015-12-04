@@ -8,81 +8,85 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QueueCell" rowHeight="108" id="KGk-i7-Jjw" customClass="QueueCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QueueCell" rowHeight="60" id="KGk-i7-Jjw" customClass="QueueCell">
             <rect key="frame" x="0.0" y="0.0" width="405" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="405" height="108"/>
+                <rect key="frame" x="0.0" y="0.0" width="405" height="107.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth Criminal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-re-TXV">
+                        <rect key="frame" x="79" y="4" width="260" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2qP-TS-W8W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Jackson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMH-GM-hDI">
+                        <rect key="frame" x="79" y="84" width="260" height="20"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Hl-Pp-AT2">
-                        <rect key="frame" x="18" y="18" width="60" height="60"/>
+                        <rect key="frame" x="4" y="4" width="70" height="100"/>
                         <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="Azg-Dm-DCN"/>
+                            <constraint firstAttribute="width" constant="70" id="jHY-Pi-SYr"/>
                             <constraint firstAttribute="height" constant="60" id="wQb-A5-fxT"/>
-                        </constraints>
-                    </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7J-a3-ngA" userLabel="Label View">
-                        <rect key="frame" x="88" y="23" width="127" height="50"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Jackson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMH-GM-hDI">
-                                <rect key="frame" x="0.0" y="29" width="127" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth Criminal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e8-re-TXV">
-                                <rect key="frame" x="0.0" y="0.0" width="127" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="2qP-TS-W8W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="mMH-GM-hDI" secondAttribute="bottom" id="7hf-FV-MZb"/>
-                            <constraint firstAttribute="trailing" secondItem="7e8-re-TXV" secondAttribute="trailing" id="7q3-mg-1yC"/>
-                            <constraint firstItem="mMH-GM-hDI" firstAttribute="leading" secondItem="V7J-a3-ngA" secondAttribute="leading" id="9Yu-4t-eqy"/>
-                            <constraint firstItem="mMH-GM-hDI" firstAttribute="top" secondItem="7e8-re-TXV" secondAttribute="bottom" constant="8" symbolic="YES" id="Axk-B9-YAN"/>
-                            <constraint firstItem="7e8-re-TXV" firstAttribute="leading" secondItem="V7J-a3-ngA" secondAttribute="leading" id="Ir0-4s-ACz"/>
-                            <constraint firstAttribute="trailing" secondItem="mMH-GM-hDI" secondAttribute="trailing" id="LPt-Hy-pDj"/>
-                            <constraint firstItem="7e8-re-TXV" firstAttribute="top" secondItem="V7J-a3-ngA" secondAttribute="top" id="gir-mi-C7n"/>
-                            <constraint firstItem="mMH-GM-hDI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7e8-re-TXV" secondAttribute="bottom" constant="10" id="hDT-AK-QRr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="hDT-AK-QRr"/>
+                                <exclude reference="Azg-Dm-DCN"/>
+                                <exclude reference="wQb-A5-fxT"/>
                             </mask>
                         </variation>
-                    </view>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RP-wZ-oXw">
+                        <rect key="frame" x="343" y="29" width="50" height="50"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="CHw-l3-Obs"/>
+                            <constraint firstAttribute="height" constant="50" id="gQJ-BA-PjJ"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="plus"/>
+                        <connections>
+                            <action selector="didTapAddButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5ik-bP-T2E"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="mMH-GM-hDI" firstAttribute="bottom" secondItem="1Hl-Pp-AT2" secondAttribute="bottom" id="1kh-2J-8sL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mMH-GM-hDI" secondAttribute="trailing" constant="4" id="2sN-C8-5sQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9RP-wZ-oXw" secondAttribute="trailing" constant="4" id="3FA-lo-JlB"/>
+                    <constraint firstItem="7e8-re-TXV" firstAttribute="leading" secondItem="1Hl-Pp-AT2" secondAttribute="trailing" constant="5" id="ADI-Mc-ugI"/>
                     <constraint firstItem="1Hl-Pp-AT2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AcC-ut-xug"/>
-                    <constraint firstItem="V7J-a3-ngA" firstAttribute="leading" secondItem="1Hl-Pp-AT2" secondAttribute="trailing" constant="10" id="Eai-Ob-dAn"/>
-                    <constraint firstItem="1Hl-Pp-AT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="LwJ-8a-4vv"/>
-                    <constraint firstItem="V7J-a3-ngA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="OsZ-3r-fZW"/>
-                    <constraint firstItem="V7J-a3-ngA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Syi-Ei-cL5"/>
-                    <constraint firstItem="1Hl-Pp-AT2" firstAttribute="trailing" secondItem="V7J-a3-ngA" secondAttribute="trailing" id="XW8-mp-bUV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="1Hl-Pp-AT2" secondAttribute="bottom" constant="10" id="eUL-Qn-B38"/>
-                    <constraint firstItem="1Hl-Pp-AT2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="lPj-FI-qoD"/>
+                    <constraint firstItem="mMH-GM-hDI" firstAttribute="leading" secondItem="1Hl-Pp-AT2" secondAttribute="trailing" constant="5" id="KSc-Oc-CXc"/>
+                    <constraint firstItem="1Hl-Pp-AT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="LwJ-8a-4vv"/>
+                    <constraint firstItem="9RP-wZ-oXw" firstAttribute="leading" secondItem="mMH-GM-hDI" secondAttribute="trailing" constant="4" id="PHh-cG-gvH"/>
+                    <constraint firstAttribute="bottom" secondItem="1Hl-Pp-AT2" secondAttribute="bottom" constant="4" id="eUL-Qn-B38"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="7e8-re-TXV" secondAttribute="trailing" constant="4" id="fjl-WV-l7B"/>
+                    <constraint firstItem="9RP-wZ-oXw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ho6-Ki-fWb"/>
+                    <constraint firstItem="9RP-wZ-oXw" firstAttribute="leading" secondItem="7e8-re-TXV" secondAttribute="trailing" constant="4" id="kLA-4i-GB9"/>
+                    <constraint firstItem="1Hl-Pp-AT2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="lPj-FI-qoD"/>
+                    <constraint firstItem="7e8-re-TXV" firstAttribute="top" secondItem="1Hl-Pp-AT2" secondAttribute="top" id="xts-fy-Wx6"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="XW8-mp-bUV"/>
-                        <exclude reference="OsZ-3r-fZW"/>
+                        <exclude reference="fjl-WV-l7B"/>
+                        <exclude reference="2sN-C8-5sQ"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="addButton" destination="9RP-wZ-oXw" id="gd2-4n-rIz"/>
                 <outlet property="artistLabel" destination="mMH-GM-hDI" id="2HQ-Le-3CS"/>
                 <outlet property="thumbnail" destination="1Hl-Pp-AT2" id="Xv6-Rj-bVg"/>
                 <outlet property="titleLabel" destination="7e8-re-TXV" id="E6i-SN-CZ1"/>
@@ -90,4 +94,7 @@
             <point key="canvasLocation" x="415.5" y="641"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="plus" width="313" height="313"/>
+    </resources>
 </document>
