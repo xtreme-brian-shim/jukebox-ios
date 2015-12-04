@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <Blindside.h>
+#import "MQDataModule.h"
+#import "MQModule.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +17,23 @@
 
 @implementation AppDelegate
 
+- (id<BSModule>)module {
+    if (!_module) {
+        _module = [[MQModule alloc] init];
+    }
+    return _module;
+}
+
+- (id<BSInjector>)injector {
+    if (!_injector) {
+        _injector = [Blindside injectorWithModule:self.module];
+    }
+    return _injector;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [MQDataModule sharedInstance];
     return YES;
 }
 

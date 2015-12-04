@@ -1,6 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
+pod 'Blindside'
 pod 'ReactiveCocoa', '2.5'
 pod 'KSDeferred'
 pod 'AFNetworking', '2.6.3'

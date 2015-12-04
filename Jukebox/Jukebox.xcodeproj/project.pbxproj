@@ -17,6 +17,12 @@
 		9BAF60E31C1212E50018ECF1 /* QueueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E11C1212E50018ECF1 /* QueueCell.m */; };
 		9BAF60E41C1212E50018ECF1 /* QueueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF60E21C1212E50018ECF1 /* QueueCell.xib */; };
 		9BAF60E71C1218630018ECF1 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E61C1218630018ECF1 /* Song.m */; };
+		9BAF60EA1C1227470018ECF1 /* MQNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E91C1227470018ECF1 /* MQNetworkManager.m */; };
+		9BAF60ED1C1228A00018ECF1 /* MQModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60EC1C1228A00018ECF1 /* MQModule.m */; };
+		9BAF60F01C12292B0018ECF1 /* MQDataModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60EF1C12292B0018ECF1 /* MQDataModule.m */; };
+		9BAF60F31C122B2D0018ECF1 /* MQSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F21C122B2D0018ECF1 /* MQSessionManager.m */; };
+		9BAF60F61C122B770018ECF1 /* MQConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F51C122B770018ECF1 /* MQConstants.m */; };
+		9BAF60F91C122D6B0018ECF1 /* MQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,18 @@
 		9BAF60E21C1212E50018ECF1 /* QueueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueueCell.xib; sourceTree = "<group>"; };
 		9BAF60E51C1218630018ECF1 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
 		9BAF60E61C1218630018ECF1 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		9BAF60E81C1227470018ECF1 /* MQNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQNetworkManager.h; sourceTree = "<group>"; };
+		9BAF60E91C1227470018ECF1 /* MQNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQNetworkManager.m; sourceTree = "<group>"; };
+		9BAF60EB1C1228A00018ECF1 /* MQModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQModule.h; sourceTree = "<group>"; };
+		9BAF60EC1C1228A00018ECF1 /* MQModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQModule.m; sourceTree = "<group>"; };
+		9BAF60EE1C12292B0018ECF1 /* MQDataModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQDataModule.h; sourceTree = "<group>"; };
+		9BAF60EF1C12292B0018ECF1 /* MQDataModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQDataModule.m; sourceTree = "<group>"; };
+		9BAF60F11C122B2D0018ECF1 /* MQSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQSessionManager.h; sourceTree = "<group>"; };
+		9BAF60F21C122B2D0018ECF1 /* MQSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQSessionManager.m; sourceTree = "<group>"; };
+		9BAF60F41C122B770018ECF1 /* MQConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQConstants.h; sourceTree = "<group>"; };
+		9BAF60F51C122B770018ECF1 /* MQConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQConstants.m; sourceTree = "<group>"; };
+		9BAF60F71C122D6B0018ECF1 /* MQBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQBaseModel.h; sourceTree = "<group>"; };
+		9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQBaseModel.m; sourceTree = "<group>"; };
 		E2F2C5988155495D838A6562 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +105,18 @@
 				9BAF60DB1C120FB10018ECF1 /* QueueViewController.m */,
 				9BAF60E51C1218630018ECF1 /* Song.h */,
 				9BAF60E61C1218630018ECF1 /* Song.m */,
+				9BAF60E81C1227470018ECF1 /* MQNetworkManager.h */,
+				9BAF60E91C1227470018ECF1 /* MQNetworkManager.m */,
+				9BAF60EB1C1228A00018ECF1 /* MQModule.h */,
+				9BAF60EC1C1228A00018ECF1 /* MQModule.m */,
+				9BAF60EE1C12292B0018ECF1 /* MQDataModule.h */,
+				9BAF60EF1C12292B0018ECF1 /* MQDataModule.m */,
+				9BAF60F11C122B2D0018ECF1 /* MQSessionManager.h */,
+				9BAF60F21C122B2D0018ECF1 /* MQSessionManager.m */,
+				9BAF60F41C122B770018ECF1 /* MQConstants.h */,
+				9BAF60F51C122B770018ECF1 /* MQConstants.m */,
+				9BAF60F71C122D6B0018ECF1 /* MQBaseModel.h */,
+				9BAF60F81C122D6B0018ECF1 /* MQBaseModel.m */,
 			);
 			path = Jukebox;
 			sourceTree = "<group>";
@@ -240,9 +270,15 @@
 			files = (
 				9BAF60E71C1218630018ECF1 /* Song.m in Sources */,
 				9BAF60DC1C120FB10018ECF1 /* QueueViewController.m in Sources */,
+				9BAF60EA1C1227470018ECF1 /* MQNetworkManager.m in Sources */,
 				9B69BE511C120BB700841D12 /* AppDelegate.m in Sources */,
 				9B69BE4E1C120BB700841D12 /* main.m in Sources */,
 				9BAF60E31C1212E50018ECF1 /* QueueCell.m in Sources */,
+				9BAF60ED1C1228A00018ECF1 /* MQModule.m in Sources */,
+				9BAF60F61C122B770018ECF1 /* MQConstants.m in Sources */,
+				9BAF60F01C12292B0018ECF1 /* MQDataModule.m in Sources */,
+				9BAF60F31C122B2D0018ECF1 /* MQSessionManager.m in Sources */,
+				9BAF60F91C122D6B0018ECF1 /* MQBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

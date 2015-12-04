@@ -34,18 +34,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Q8-NF-bLf">
-                                <rect key="frame" x="251" y="285" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Q8-NF-bLf">
+                                <rect key="frame" x="5" y="68" width="590" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="search"/>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="N32-JM-vr3">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                             </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ANI-L9-RVe">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="103" width="600" height="497"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -58,12 +58,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ANI-L9-RVe" secondAttribute="trailing" id="5bb-n9-rAE"/>
+                            <constraint firstItem="4Q8-NF-bLf" firstAttribute="top" secondItem="tCH-xf-Yhb" secondAttribute="bottom" constant="4" id="RJf-Aq-1uX"/>
                             <constraint firstItem="ANI-L9-RVe" firstAttribute="leading" secondItem="jix-NL-THW" secondAttribute="leading" id="Ts9-zb-eRf"/>
                             <constraint firstItem="N32-JM-vr3" firstAttribute="leading" secondItem="jix-NL-THW" secondAttribute="leading" id="TsF-93-dHh"/>
                             <constraint firstItem="N32-JM-vr3" firstAttribute="top" secondItem="tCH-xf-Yhb" secondAttribute="bottom" id="VGH-vB-bOM"/>
                             <constraint firstAttribute="trailing" secondItem="N32-JM-vr3" secondAttribute="trailing" id="ddz-4p-DkT"/>
-                            <constraint firstItem="ANI-L9-RVe" firstAttribute="top" secondItem="tCH-xf-Yhb" secondAttribute="bottom" id="eHC-pc-mTq"/>
                             <constraint firstItem="Qmg-YA-j4i" firstAttribute="top" secondItem="ANI-L9-RVe" secondAttribute="bottom" id="oBq-Mj-fg4"/>
+                            <constraint firstItem="4Q8-NF-bLf" firstAttribute="leading" secondItem="jix-NL-THW" secondAttribute="leading" constant="5" id="q0m-TP-4z9"/>
+                            <constraint firstAttribute="trailing" secondItem="4Q8-NF-bLf" secondAttribute="trailing" constant="5" id="tTz-Da-7Pu"/>
+                            <constraint firstItem="ANI-L9-RVe" firstAttribute="top" secondItem="4Q8-NF-bLf" secondAttribute="bottom" constant="5" id="xIg-BC-zhu"/>
                             <constraint firstItem="Qmg-YA-j4i" firstAttribute="top" secondItem="N32-JM-vr3" secondAttribute="bottom" id="zcs-qP-025"/>
                         </constraints>
                     </view>
@@ -71,6 +74,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="8eU-j5-5w1"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="4Q8-NF-bLf" id="WIO-y8-ob1"/>
                         <outlet property="tableView" destination="ANI-L9-RVe" id="mP0-dC-iiP"/>
                     </connections>
                 </viewController>

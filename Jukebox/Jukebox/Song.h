@@ -7,15 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MQBaseModel.h"
 
-@interface Song : NSObject
+@interface Song <NSCopying, NSMutableCopying> : MQBaseModel
 
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *artist;
-@property (nonatomic, strong) NSString *album;
-@property (nonatomic, strong) NSString *image;
-@property (nonatomic, strong) NSString *streamUrl;
-@property (nonatomic, assign) time_t length;
+@property (nonatomic, strong, readonly) NSString *songID;
+@property (nonatomic, strong, readonly) NSString *title;
+@property (nonatomic, strong, readonly) NSString *artist;
+@property (nonatomic, strong, readonly) NSString *album;
+@property (nonatomic, strong, readonly) NSString *image;
+@property (nonatomic, strong, readonly) NSString *streamUrl;
+@property (nonatomic, assign, readonly) time_t length;
+
 
 -(instancetype) initWithTitle:(NSString *)title artist:(NSString *)artist album:(NSString *)album image:(NSString *)image streamUrl:(NSString *)streamUrl length:(time_t)length;
 
