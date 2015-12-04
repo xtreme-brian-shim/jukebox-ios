@@ -50,8 +50,8 @@
                   parameters:params
                      success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
                          NSLog(@"Fetching song list success");
-                         
-                         NSArray *songs = [responseObject map:^id(NSDictionary *songJson) {
+                         NSArray *resultArray = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:NULL];
+                         NSArray *songs = [resultArray map:^id(NSDictionary *songJson) {
                              NSError *error;
                              Song *song = [MTLJSONAdapter modelOfClass:Song.class fromJSONDictionary:songJson error:&error];
                              if (error) {

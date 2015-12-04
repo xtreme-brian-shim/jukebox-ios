@@ -40,7 +40,7 @@
             @"title" : @"title",
              @"artist" : @"artist",
              @"album" : @"album",
-             @"image" : @"image",
+             @"image" : @"thumbnail",
              @"streamUrl" : @"streamUrl",
              @"length" : @"length",
              };

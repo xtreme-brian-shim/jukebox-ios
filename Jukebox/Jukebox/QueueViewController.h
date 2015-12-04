@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QueueViewController<UITableViewDataSource, UITableViewDelegate> : UIViewController
+@interface QueueViewController<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate> : UIViewController
 
 @end

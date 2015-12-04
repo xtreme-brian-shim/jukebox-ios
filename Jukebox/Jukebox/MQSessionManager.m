@@ -24,7 +24,8 @@
     self = [super initWithBaseURL:url];
     if (self) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
+        self.responseSerializer = [AFHTTPResponseSerializer serializer];
+//        self.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
         [self.securityPolicy setAllowInvalidCertificates:YES];
         [self.securityPolicy setValidatesDomainName:NO];
     }
