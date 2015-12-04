@@ -20,17 +20,27 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - KSDeferred (0.3.0)
   - Mantle (2.0.5):
     - Mantle/extobjc (= 2.0.5)
   - Mantle/extobjc (2.0.5)
   - PivotalCoreKit/Foundation/Core (0.3.0)
   - PureLayout (3.0.1)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.6.3)
+  - AFNetworking (= 2.6.3)
+  - KSDeferred
   - Mantle (= 2.0.5)
   - PivotalCoreKit/Foundation/Core (from `https://github.com/pivotal/PivotalCoreKit.git`)
   - PureLayout (= 3.0.1)
+  - ReactiveCocoa (= 2.5)
 
 EXTERNAL SOURCES:
   PivotalCoreKit:
@@ -43,8 +53,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  KSDeferred: 7bb8156c988ed2a5e40111521d34dfb7a0390d23
   Mantle: 1912395033f601de5adc8ee91e48f46e4c7051ad
   PivotalCoreKit: 1ac73311d636d3ea6478fdc2a994979d970f2990
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
 COCOAPODS: 0.39.0

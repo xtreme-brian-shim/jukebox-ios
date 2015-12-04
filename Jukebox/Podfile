@@ -1,9 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
-xcodeproj 'Jukebox.xcodeproj'
-
-pod 'AFNetworking', '~> 2.6.3'
+pod 'ReactiveCocoa', '2.5'
+pod 'KSDeferred'
+pod 'AFNetworking', '2.6.3'
 pod 'Mantle', '2.0.5'
 pod 'PivotalCoreKit/Foundation/Core', :git => 'https://github.com/pivotal/PivotalCoreKit.git'
 pod 'PureLayout', '3.0.1'
