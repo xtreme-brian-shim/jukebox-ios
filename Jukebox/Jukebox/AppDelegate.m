@@ -10,6 +10,7 @@
 #import <Blindside.h>
 #import "MQDataModule.h"
 #import "MQModule.h"
+#import "UIColor+MQ.h"
 
 @interface AppDelegate ()
 
@@ -37,6 +38,13 @@
     // style back button
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTranslucent:YES];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor mqWhiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{  NSForegroundColorAttributeName: [UIColor mqWhiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
+    UITextField *textField = [UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]];
+    [textField setTextColor:[UIColor mqWhiteColor]];
+
     [MQDataModule sharedInstance];
     return YES;
 }

@@ -10,6 +10,7 @@
 #import "MQDataModule.h"
 #import "SearchResult.h"
 #import "MQConstants.h"
+#import "UIColor+MQ.h"
 
 @interface SearchViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -31,7 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Musi-Q";
+
+//    self.view.backgroundColor = [UIColor blueColor];
+//
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor mqBackgroundColor] CGColor], (id)[[UIColor colorWithRed:96/255.0f green:168/255.0f blue:184/255.0f alpha:1] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+
+    
+    self.title = @"Search";
     _readyToSearch = YES;
     self.noSearchResultsView.hidden = NO;
     
@@ -42,6 +52,13 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    self.tableView.tableFooterView = [UIView new];
+    self.searchBar.barTintColor = [UIColor clearColor];
+    self.searchBar.backgroundColor = [UIColor clearColor];
+    self.searchBar.backgroundImage = [UIImage new];
+    self.searchBar.placeholder = @"Search for a song";
+    [self.searchBar setSearchBarStyle:UISearchBarStyleMinimal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -170,6 +187,7 @@
 #pragma  mark - SearchCellDelegate
 -(void)didTouchAddSearchResult:(SearchResult *)searchResult {
     [[MQDataModule sharedInstance] upvoteSongID:searchResult.songID WithSuccess:^(id result) {
+        NSLog(@"Added to Queue");
 //        [UIView animateWithDuration:3 animations:^{
 //            self.updateView.hidden = NO;
 //        } completion:^(BOOL finished) {

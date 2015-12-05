@@ -29,8 +29,12 @@
 
 - (void)configureWithSong:(SearchResult *)searchResult {
     self.searchResult = searchResult;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.searchResult.image]];
-    self.thumbnail.image = [UIImage imageWithData:data];
+    if (searchResult.image && searchResult.image.length > 0) {
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.searchResult.image]];
+        self.thumbnail.image = [UIImage imageWithData:data];
+    } else {
+        self.thumbnail.image = [UIImage imageNamed:@"placeholder-album.png"];
+    }
     self.titleLabel.text = self.searchResult.title;
     self.artistLabel.text = self.searchResult.artist;
 }

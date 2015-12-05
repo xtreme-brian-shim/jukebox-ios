@@ -9,6 +9,7 @@
 #import "QueueViewController.h"
 #import "Song.h"
 #import "MQDataModule.h"
+#import "UIColor+MQ.h"
 
 @interface QueueViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *albumImageView;
@@ -26,7 +27,13 @@
 @implementation QueueViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    self.title = @"Musi-Q";
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor mqBackgroundColor] CGColor], (id)[[UIColor colorWithRed:96/255.0f green:168/255.0f blue:184/255.0f alpha:1] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
     
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([QueueCell class]) bundle:[NSBundle bundleForClass:[self class]]];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"QueueCell"];
@@ -35,7 +42,10 @@
     
     [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(fetchQueue) userInfo:nil repeats:YES];
-    [self.timer fire];}
+    [self.timer fire];
+    
+    self.tableView.tableFooterView = [UIView new];
+}
 
 - (void) fetchQueue {
     
@@ -95,6 +105,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell=(UITableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:YES];
     [self didTouchAddSong:self.queue[indexPath.row]];
 }
 

@@ -25,17 +25,24 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.addButton.userInteractionEnabled = NO;
 }
 
 - (void)configureWithSong:(Song *)song {
     self.song = song;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.song.image]];
-    self.thumbnail.image = [UIImage imageWithData:data];
+    if (song.image && song.image.length > 0) {
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.song.image]];
+        self.thumbnail.image = [UIImage imageWithData:data];
+    } else {
+        self.thumbnail.image = [UIImage imageNamed:@"placeholder-album.png"];
+    }
     self.titleLabel.text = self.song.title;
     self.artistLabel.text = self.song.artist;
 }
 
+- (void) setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    [self.addButton setSelected:selected];
+}
 
 - (IBAction)didTapAddButton:(id)sender {
     [self.queueCellDelegate didTouchAddSong:self.song];

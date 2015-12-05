@@ -16,6 +16,7 @@
 		9BAD32F31C125E3E0073581E /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD32F21C125E3E0073581E /* SearchResult.m */; };
 		9BAD32F71C125FA00073581E /* SearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD32F51C125FA00073581E /* SearchCell.m */; };
 		9BAD32F81C125FA00073581E /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAD32F61C125FA00073581E /* SearchCell.xib */; };
+		9BAD32FB1C12898A0073581E /* UIColor+MQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD32FA1C12898A0073581E /* UIColor+MQ.m */; };
 		9BAF60DC1C120FB10018ECF1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60DB1C120FB10018ECF1 /* SearchViewController.m */; };
 		9BAF60E31C1212E50018ECF1 /* QueueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BAF60E11C1212E50018ECF1 /* QueueCell.m */; };
 		9BAF60E41C1212E50018ECF1 /* QueueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAF60E21C1212E50018ECF1 /* QueueCell.xib */; };
@@ -45,6 +46,8 @@
 		9BAD32F41C125FA00073581E /* SearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCell.h; sourceTree = "<group>"; };
 		9BAD32F51C125FA00073581E /* SearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCell.m; sourceTree = "<group>"; };
 		9BAD32F61C125FA00073581E /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		9BAD32F91C12898A0073581E /* UIColor+MQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MQ.h"; sourceTree = "<group>"; };
+		9BAD32FA1C12898A0073581E /* UIColor+MQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MQ.m"; sourceTree = "<group>"; };
 		9BAF60DA1C120FB10018ECF1 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SearchViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9BAF60DB1C120FB10018ECF1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SearchViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9BAF60E01C1212E50018ECF1 /* QueueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueueCell.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				9BAD32F41C125FA00073581E /* SearchCell.h */,
 				9BAD32F51C125FA00073581E /* SearchCell.m */,
 				9BAD32F61C125FA00073581E /* SearchCell.xib */,
+				9BAD32F91C12898A0073581E /* UIColor+MQ.h */,
+				9BAD32FA1C12898A0073581E /* UIColor+MQ.m */,
 			);
 			path = Jukebox;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			files = (
 				9BAD32F31C125E3E0073581E /* SearchResult.m in Sources */,
 				9BAF60FC1C1250950018ECF1 /* QueueViewController.m in Sources */,
+				9BAD32FB1C12898A0073581E /* UIColor+MQ.m in Sources */,
 				9BAF60E71C1218630018ECF1 /* Song.m in Sources */,
 				9BAD32F71C125FA00073581E /* SearchCell.m in Sources */,
 				9BAF60DC1C120FB10018ECF1 /* SearchViewController.m in Sources */,
