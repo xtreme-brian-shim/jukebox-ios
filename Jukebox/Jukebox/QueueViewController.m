@@ -19,6 +19,8 @@
 @property (nonatomic, strong) NSArray *queue;
 @property (nonatomic, strong) Song *currentSong;
 @property (weak, nonatomic) IBOutlet UIView *noCurrentSongView;
+@property (weak, nonatomic) IBOutlet UIView *updateView;
+@property (weak, nonatomic) IBOutlet UILabel *updateViewLabel;
 
 @property (nonatomic, strong) NSTimer *timer;
 
@@ -44,6 +46,9 @@
     self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(fetchQueue) userInfo:nil repeats:YES];
     [self.timer fire];
     
+    self.updateView.alpha = 0;
+    self.updateView.backgroundColor = [UIColor blackColor];
+
     self.tableView.tableFooterView = [UIView new];
 }
 
@@ -111,9 +116,19 @@
 }
 
 #pragma mark - QueueCellDelegate
+
 -(void)didTouchAddSong:(Song *)song {
     [[MQDataModule sharedInstance] upvoteSongID:song.songID WithSuccess:^(id result) {
         NSLog(@"upvoted!");
+        [UIView animateWithDuration:1 animations:^{
+            [self.view bringSubviewToFront:self.updateView];
+            self.updateView.alpha = 0.6;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:1 animations:^{
+                self.updateView.alpha = 0;
+            }];
+        }];
+
     } failure:^(NSError *error) {
         NSLog(@"failed upvote!");
     }];

@@ -40,8 +40,10 @@
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor mqBackgroundColor] CGColor], (id)[[UIColor colorWithRed:96/255.0f green:168/255.0f blue:184/255.0f alpha:1] CGColor], nil];
     [self.view.layer insertSublayer:gradient atIndex:0];
 
+    self.updateView.alpha = 0;
+    self.updateView.backgroundColor = [UIColor blackColor];
     
-    self.title = @"Search";
+    self.title = @"Request a Song";
     _readyToSearch = YES;
     self.noSearchResultsView.hidden = NO;
     
@@ -57,7 +59,7 @@
     self.searchBar.barTintColor = [UIColor clearColor];
     self.searchBar.backgroundColor = [UIColor clearColor];
     self.searchBar.backgroundImage = [UIImage new];
-    self.searchBar.placeholder = @"Search for a song";
+    self.searchBar.placeholder = @"Search";
     [self.searchBar setSearchBarStyle:UISearchBarStyleMinimal];
 }
 
@@ -188,14 +190,14 @@
 -(void)didTouchAddSearchResult:(SearchResult *)searchResult {
     [[MQDataModule sharedInstance] upvoteSongID:searchResult.songID WithSuccess:^(id result) {
         NSLog(@"Added to Queue");
-//        [UIView animateWithDuration:3 animations:^{
-//            self.updateView.hidden = NO;
-//        } completion:^(BOOL finished) {
-//            [UIView animateWithDuration:1 animations:^{
-//                self.updateView.hidden = YES;
-//            } completion:^(BOOL finished) {
-//            }];
-//        }];
+        [UIView animateWithDuration:1 animations:^{
+            [self.view bringSubviewToFront:self.updateView];
+            self.updateView.alpha = 0.6;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:1 animations:^{
+                self.updateView.alpha = 0;
+            }];
+        }];
     } failure:^(NSError *error) {
         NSLog(@"Failed to upvote");
     }];
