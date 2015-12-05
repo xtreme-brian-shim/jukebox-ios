@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="405" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IB9-au-DeY" id="3IQ-Xc-2uG">
-                <rect key="frame" x="0.0" y="0.0" width="405" height="108"/>
+                <rect key="frame" x="0.0" y="0.0" width="405" height="107.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qJ-R2-4TK">
@@ -85,7 +85,7 @@
                 </variation>
             </tableViewCellContentView>
             <animations/>
-            <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="0.5" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
             <connections>
                 <outlet property="addButton" destination="98O-lM-a8V" id="54k-r3-51C"/>

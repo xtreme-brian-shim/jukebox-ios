@@ -44,7 +44,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{  NSForegroundColorAttributeName: [UIColor mqWhiteColor], NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
     UITextField *textField = [UITextField appearanceWhenContainedInInstancesOfClasses:@[[UISearchBar class]]];
     [textField setTextColor:[UIColor mqWhiteColor]];
-
+    
     [MQDataModule sharedInstance];
     return YES;
 }

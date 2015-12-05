@@ -190,11 +190,11 @@
 -(void)didTouchAddSearchResult:(SearchResult *)searchResult {
     [[MQDataModule sharedInstance] upvoteSongID:searchResult.songID WithSuccess:^(id result) {
         NSLog(@"Added to Queue");
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:1.2 animations:^{
             [self.view bringSubviewToFront:self.updateView];
-            self.updateView.alpha = 0.6;
+            self.updateView.alpha = 0.7;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1 animations:^{
+            [UIView animateWithDuration:1.3 animations:^{
                 self.updateView.alpha = 0;
             }];
         }];

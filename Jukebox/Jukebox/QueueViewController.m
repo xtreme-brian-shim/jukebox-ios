@@ -120,11 +120,11 @@
 -(void)didTouchAddSong:(Song *)song {
     [[MQDataModule sharedInstance] upvoteSongID:song.songID WithSuccess:^(id result) {
         NSLog(@"upvoted!");
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:1.2 animations:^{
             [self.view bringSubviewToFront:self.updateView];
-            self.updateView.alpha = 0.6;
+            self.updateView.alpha = 0.7;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1 animations:^{
+            [UIView animateWithDuration:1.3 animations:^{
                 self.updateView.alpha = 0;
             }];
         }];
