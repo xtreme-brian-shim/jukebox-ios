@@ -12,6 +12,7 @@
 #import "MQSessionManager.h"
 #import "MTLJSONAdapter.h"
 #import "Song.h"
+#import "SearchResult.h"
 #import "NSArray+PivotalCore.h"
 
 
@@ -53,7 +54,7 @@
                          NSArray *resultArray = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:NULL];
                          NSArray *songs = [resultArray map:^id(NSDictionary *songJson) {
                              NSError *error;
-                             Song *song = [MTLJSONAdapter modelOfClass:Song.class fromJSONDictionary:songJson error:&error];
+                             Song *song = [MTLJSONAdapter modelOfClass:SearchResult.class fromJSONDictionary:songJson error:&error];
                              if (error) {
                                  NSLog(@"failed to parse Song from list");
                                  return NULL;

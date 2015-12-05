@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *queue;
+@property (nonatomic, strong) Song *currentSong;
 @property (weak, nonatomic) IBOutlet UIView *noCurrentSongView;
 
 @end
@@ -29,6 +30,8 @@
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([QueueCell class]) bundle:[NSBundle bundleForClass:[self class]]];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"QueueCell"];
     
+    self.noCurrentSongView.hidden = NO;
+    
     [[MQDataModule sharedInstance] fetchQueueWithSuccess:^(id result) {
         if (result) {
             self.queue = result;
@@ -40,9 +43,9 @@
     
     [[MQDataModule sharedInstance] fetchCurrentlyPlayingSuccess:^(id result) {
         if (result) {
-            self.queue = result;
+            self.currentSong = result;
+            [self configureWithCurrentSong];
             self.noCurrentSongView.hidden = YES;
-            [self.tableView reloadData];
         } else {
             [self configureForNoCurrentSong];
         }
@@ -51,6 +54,13 @@
         [self configureForNoCurrentSong];
     }];
     
+}
+
+-(void)configureWithCurrentSong {
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.currentSong.image]];
+    self.albumImageView.image = [UIImage imageWithData:data];
+    self.songLabel.text = self.currentSong.title;
+    self.artistLabel.text = self.currentSong.artist;
 }
 
 -(void)configureForNoCurrentSong {

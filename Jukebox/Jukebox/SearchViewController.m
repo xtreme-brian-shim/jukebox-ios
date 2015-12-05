@@ -7,9 +7,9 @@
 //
 
 #import "SearchViewController.h"
-#import "QueueCell.h"
+#import "SearchCell.h"
 #import "MQDataModule.h"
-#import "Song.h"
+#import "SearchResult.h"
 #import "MQConstants.h"
 
 @interface SearchViewController ()
@@ -33,8 +33,8 @@
     _readyToSearch = YES;
     self.noSearchResultsView.hidden = NO;
     
-    UINib *nib = [UINib nibWithNibName:NSStringFromClass([QueueCell class]) bundle:[NSBundle bundleForClass:[self class]]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"QueueCell"];
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([SearchCell class]) bundle:[NSBundle bundleForClass:[self class]]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"SearchCell"];
     
     [self updateSearchQuery];
     
@@ -100,10 +100,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    Song *song = [[Song alloc] initWithTitle:@"Smooth Criminal" artist:@"Michael Jackson" album:@"" image:@"https://upload.wikimedia.org/wikipedia/en/3/32/Smooth_criminal_video.jpg" streamUrl:@"" length:200];
-    Song *song = self.searchResults[indexPath.row];
-    QueueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
-    [cell configureWithSong:song];
+    SearchResult *searchResult = self.searchResults[indexPath.row];
+    SearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
+    [cell configureWithSong:searchResult];
     return cell;
 }
 

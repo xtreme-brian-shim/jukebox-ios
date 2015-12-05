@@ -1,38 +1,37 @@
 //
-//  QueueCell.m
+//  SearchCell.m
 //  Jukebox
 //
 //  Created by Brian Shim on 2015-12-04.
 //  Copyright © 2015 Pivotal. All rights reserved.
 //
 
-#import "QueueCell.h"
-#import "Song.h"
+#import "SearchCell.h"
 #import "SearchResult.h"
 
 
-@interface QueueCell ()
+@interface SearchCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnail;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 
-@property (nonatomic, strong) Song *song;
+@property (nonatomic, strong) SearchResult *searchResult;
 @end
 
-@implementation QueueCell
+@implementation SearchCell
 
 - (void)awakeFromNib {
     // Initialization code
 }
 
-- (void)configureWithSong:(Song *)song {
-    self.song = song;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.song.image]];
+- (void)configureWithSong:(SearchResult *)searchResult {
+    self.searchResult = searchResult;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.searchResult.image]];
     self.thumbnail.image = [UIImage imageWithData:data];
-    self.titleLabel.text = self.song.title;
-    self.artistLabel.text = self.song.artist;
+    self.titleLabel.text = self.searchResult.title;
+    self.artistLabel.text = self.searchResult.artist;
 }
 
 
