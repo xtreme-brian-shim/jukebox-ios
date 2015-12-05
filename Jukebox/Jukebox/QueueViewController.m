@@ -20,6 +20,8 @@
 @property (nonatomic, strong) Song *currentSong;
 @property (weak, nonatomic) IBOutlet UIView *noCurrentSongView;
 
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation QueueViewController
@@ -31,6 +33,12 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"QueueCell"];
     
     self.noCurrentSongView.hidden = NO;
+    
+    [self.timer invalidate];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(fetchQueue) userInfo:nil repeats:YES];
+    [self.timer fire];}
+
+- (void) fetchQueue {
     
     [[MQDataModule sharedInstance] fetchQueueWithSuccess:^(id result) {
         if (result) {
@@ -53,7 +61,6 @@
         NSLog(@"failed fetch queue");
         [self configureForNoCurrentSong];
     }];
-    
 }
 
 -(void)configureWithCurrentSong {
