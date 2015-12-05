@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.title = @"Musi-Q";
+    self.title = @"MusiQ";
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.view.bounds;
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor mqBackgroundColor] CGColor], (id)[[UIColor colorWithRed:96/255.0f green:168/255.0f blue:184/255.0f alpha:1] CGColor], nil];
