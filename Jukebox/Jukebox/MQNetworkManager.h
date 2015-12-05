@@ -18,8 +18,11 @@
 -(void)fetchQueueWithSuccess:(SuccssBlock)success
                      failure:(FailureBlock)failure;
 
--(void)fetchCurrentlyPlayingWithSuccess:(SuccssBlock)success
+-(void)fetchCurrentlyPlayingWithSuccess:(SuccssBlock)succes
                                 failure:(FailureBlock)failure;
 
+-(void)upvoteSongID:(NSString *)songID
+        WithSuccess:(SuccssBlock)success
+            failure:(FailureBlock)failure;
 
 @end

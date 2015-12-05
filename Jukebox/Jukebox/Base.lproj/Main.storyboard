@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="117" width="600" height="483"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Search Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbx-V3-49a">
-                                        <rect key="frame" x="230" y="232" width="140" height="20"/>
+                                        <rect key="frame" x="230" y="232" width="140" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,6 +74,28 @@
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0U-zP-KJk" userLabel="UpdateView">
+                                <rect key="frame" x="170" y="259" width="260" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successfully Added to Queue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Li-HG-gXm">
+                                        <rect key="frame" x="0.0" y="90" width="260" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0Li-HG-gXm" firstAttribute="leading" secondItem="U0U-zP-KJk" secondAttribute="leading" id="3am-Ze-RPj"/>
+                                    <constraint firstAttribute="height" constant="200" id="7T2-rP-P8U"/>
+                                    <constraint firstAttribute="width" constant="260" id="PYh-0k-djV"/>
+                                    <constraint firstItem="0Li-HG-gXm" firstAttribute="centerX" secondItem="U0U-zP-KJk" secondAttribute="centerX" id="hWG-LW-cE5"/>
+                                    <constraint firstItem="0Li-HG-gXm" firstAttribute="centerY" secondItem="U0U-zP-KJk" secondAttribute="centerY" id="qxe-m2-xUe"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Li-HG-gXm" secondAttribute="trailing" id="zE1-UG-4U5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,6 +104,7 @@
                             <constraint firstItem="Vb0-Fp-Wa3" firstAttribute="top" secondItem="tCH-xf-Yhb" secondAttribute="bottom" constant="5" id="2W9-Cv-HG0"/>
                             <constraint firstAttribute="trailing" secondItem="ANI-L9-RVe" secondAttribute="trailing" id="5bb-n9-rAE"/>
                             <constraint firstItem="esF-dL-Vei" firstAttribute="leading" secondItem="ANI-L9-RVe" secondAttribute="leading" id="E4U-Di-D9j"/>
+                            <constraint firstItem="U0U-zP-KJk" firstAttribute="centerX" secondItem="ANI-L9-RVe" secondAttribute="centerX" id="S3h-eu-qh3"/>
                             <constraint firstItem="ANI-L9-RVe" firstAttribute="leading" secondItem="jix-NL-THW" secondAttribute="leading" id="Ts9-zb-eRf"/>
                             <constraint firstItem="N32-JM-vr3" firstAttribute="leading" secondItem="jix-NL-THW" secondAttribute="leading" id="TsF-93-dHh"/>
                             <constraint firstItem="N32-JM-vr3" firstAttribute="top" secondItem="tCH-xf-Yhb" secondAttribute="bottom" id="VGH-vB-bOM"/>
@@ -89,6 +112,7 @@
                             <constraint firstAttribute="trailing" secondItem="N32-JM-vr3" secondAttribute="trailing" id="ddz-4p-DkT"/>
                             <constraint firstItem="ANI-L9-RVe" firstAttribute="top" secondItem="Vb0-Fp-Wa3" secondAttribute="bottom" constant="4" id="gLf-oJ-TJS"/>
                             <constraint firstItem="esF-dL-Vei" firstAttribute="bottom" secondItem="ANI-L9-RVe" secondAttribute="bottom" id="kts-Ab-bzq"/>
+                            <constraint firstItem="U0U-zP-KJk" firstAttribute="centerY" secondItem="ANI-L9-RVe" secondAttribute="centerY" id="mqQ-cg-81x"/>
                             <constraint firstItem="Qmg-YA-j4i" firstAttribute="top" secondItem="ANI-L9-RVe" secondAttribute="bottom" id="oBq-Mj-fg4"/>
                             <constraint firstItem="esF-dL-Vei" firstAttribute="trailing" secondItem="ANI-L9-RVe" secondAttribute="trailing" id="sKT-xD-CVr"/>
                             <constraint firstAttribute="trailing" secondItem="Vb0-Fp-Wa3" secondAttribute="trailing" id="xPQ-mn-0ZZ"/>
@@ -107,6 +131,8 @@
                         <outlet property="noSearchResultsView" destination="esF-dL-Vei" id="7ic-FQ-Wmt"/>
                         <outlet property="searchBar" destination="Vb0-Fp-Wa3" id="cor-RG-37c"/>
                         <outlet property="tableView" destination="ANI-L9-RVe" id="mP0-dC-iiP"/>
+                        <outlet property="updateView" destination="U0U-zP-KJk" id="iVq-BB-GwR"/>
+                        <outlet property="updateViewLabel" destination="0Li-HG-gXm" id="K5F-mG-3fV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aS8-ec-3Hx" userLabel="First Responder" sceneMemberID="firstResponder"/>

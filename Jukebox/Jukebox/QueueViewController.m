@@ -9,7 +9,6 @@
 #import "QueueViewController.h"
 #import "Song.h"
 #import "MQDataModule.h"
-#import "QueueCell.h"
 
 @interface QueueViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *albumImageView;
@@ -83,6 +82,7 @@
     Song *song = self.queue[indexPath.row];
     QueueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QueueCell"];
     [cell configureWithSong:song];
+    cell.queueCellDelegate = self;
     return cell;
 }
 
@@ -94,5 +94,17 @@
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self didTouchAddSong:self.queue[indexPath.row]];
+}
+
+#pragma mark - QueueCellDelegate
+-(void)didTouchAddSong:(Song *)song {
+    [[MQDataModule sharedInstance] upvoteSongID:song.songID WithSuccess:^(id result) {
+        NSLog(@"upvoted!");
+    } failure:^(NSError *error) {
+        NSLog(@"failed upvote!");
+    }];
+}
 
 @end

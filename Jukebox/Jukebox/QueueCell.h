@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class Song;
 
+@protocol QueueCellDelegate
+
+-(void)didTouchAddSong:(Song *)song;
+
+@end
+
 @interface QueueCell : UITableViewCell
+
+@property (nonatomic, weak) id<QueueCellDelegate> queueCellDelegate;
 
 - (void)configureWithSong:(Song *)song;
 

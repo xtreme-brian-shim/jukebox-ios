@@ -120,6 +120,26 @@
                      }];
 }
 
+-(void)upvoteSongID:(NSString *)songID WithSuccess:(SuccssBlock)success failure:(FailureBlock)failure
+{    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://jukebox-api.cfapps.io/queue"]
+                                                           cachePolicy:NSURLRequestReloadIgnoringCacheData  timeoutInterval:10];
+    NSString *body = [NSString stringWithFormat:@"{\"id\":\"%@\"}", songID];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody: [body dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        success(nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        failure(nil);
+    }];
+    [op start];
+}
+
 #pragma mark - Helpers
 
 - (void)parseModelClass:(Class)modelClass

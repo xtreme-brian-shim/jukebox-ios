@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 @class SearchResult;
 
+@protocol SearchCellDelegate
+
+-(void)didTouchAddSearchResult:(SearchResult *)searchResult;
+
+@end
+
 @interface SearchCell : UITableViewCell
+
+@property (nonatomic, weak) id<SearchCellDelegate> searchCellDelegate;
 
 - (void)configureWithSong:(SearchResult *)searchResult;
 

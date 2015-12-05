@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.addButton.userInteractionEnabled = NO;
 }
 
 - (void)configureWithSong:(SearchResult *)searchResult {
@@ -36,7 +37,7 @@
 
 
 - (IBAction)didTapAddButton:(id)sender {
-    
+    [self.searchCellDelegate didTouchAddSearchResult:self.searchResult];
 }
 
 @end

@@ -49,4 +49,9 @@
     [self.networkManager fetchCurrentlyPlayingWithSuccess:success failure:failure];
 }
 
+-(void)upvoteSongID:(NSString *)songID WithSuccess:(SuccssBlock)success failure:(FailureBlock)failure {
+    [self.networkManager upvoteSongID:songID WithSuccess:success failure:failure];
+}
+
+
 @end

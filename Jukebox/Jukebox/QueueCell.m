@@ -25,6 +25,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.addButton.userInteractionEnabled = NO;
 }
 
 - (void)configureWithSong:(Song *)song {
@@ -37,7 +38,7 @@
 
 
 - (IBAction)didTapAddButton:(id)sender {
-    
+    [self.queueCellDelegate didTouchAddSong:self.song];
 }
 
 @end

@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "QueueCell.h"
 
-@interface QueueViewController<UITableViewDataSource, UITableViewDelegate> : UIViewController
+@interface QueueViewController<UITableViewDataSource, UITableViewDelegate, QueueCellDelegate> : UIViewController
 
 @end

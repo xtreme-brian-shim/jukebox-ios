@@ -7,7 +7,6 @@
 //
 
 #import "SearchViewController.h"
-#import "SearchCell.h"
 #import "MQDataModule.h"
 #import "SearchResult.h"
 #import "MQConstants.h"
@@ -20,6 +19,9 @@
 @property (nonatomic, assign) BOOL readyToSearch;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpinner;
 @property (weak, nonatomic) IBOutlet UIView *noSearchResultsView;
+
+@property (weak, nonatomic) IBOutlet UIView *updateView;
+@property (weak, nonatomic) IBOutlet UILabel *updateViewLabel;
 
 @property (nonatomic, strong) NSTimer *timer;
 @end
@@ -103,6 +105,7 @@
     SearchResult *searchResult = self.searchResults[indexPath.row];
     SearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
     [cell configureWithSong:searchResult];
+    cell.searchCellDelegate = self;
     return cell;
 }
 
@@ -115,7 +118,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self didTouchAddSearchResult:self.searchResults[indexPath.row]];
 }
 
 - (void) reloadSearchViews {
@@ -164,6 +167,20 @@
         [self.loadingSpinner stopAnimating];
     }
 }
-#pragma  mark - helper
+#pragma  mark - SearchCellDelegate
+-(void)didTouchAddSearchResult:(SearchResult *)searchResult {
+    [[MQDataModule sharedInstance] upvoteSongID:searchResult.songID WithSuccess:^(id result) {
+//        [UIView animateWithDuration:3 animations:^{
+//            self.updateView.hidden = NO;
+//        } completion:^(BOOL finished) {
+//            [UIView animateWithDuration:1 animations:^{
+//                self.updateView.hidden = YES;
+//            } completion:^(BOOL finished) {
+//            }];
+//        }];
+    } failure:^(NSError *error) {
+        NSLog(@"Failed to upvote");
+    }];
+}
 
 @end
